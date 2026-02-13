@@ -1,23 +1,25 @@
 openapi: 3.0.4
 info:
   title: Contact Extractor
-  description: Contact Extractor is a simple tool for extracting contact data from a website URL. It returns the contact emails, phone numbers, and places.
+  description: >-
+    Contact Extractor is a simple tool for extracting contact data from a
+    website URL. It returns the contact emails, phone numbers, and places.
   termsOfService: https://apiverve.com/terms/
   contact:
     name: APIVerve Support
     email: hello@apiverve.com
     url: https://apiverve.com/contact
-  version: 1.0.9
+  version: 1.0.0
 externalDocs:
   description: Learn more about APIVerve
   url: https://docs.apiverve.com?utm_source=openapi
 servers:
-- url: https://api.apiverve.com/
+  - url: https://api.apiverve.com/
 paths:
   /v1/contactextractor:
     post:
       summary: Extract Contacts
-      description: Contact Extractor is a simple tool for extracting contact data from a website URL. It returns the contact emails, phone numbers, and places.
+      description: Extract contact data from a web page
       operationId: contactextractor
       parameters: []
       responses:
@@ -35,55 +37,55 @@ paths:
                     type: string
                     description: error
                   data:
-                    type: string
+                    type: object
                     description: data
               example:
                 status: ok
-                error: 
+                error: null
                 data:
                   url: https://en.wikipedia.org/wiki/Email_address
                   emails:
-                  - john.smith@example.com
-                  - jsmith@example.com
-                  - john.smith@example.org
-                  - John..Doe@example.com
-                  - johns@example.com
-                  - JohnS@example.com
-                  - tag@example.com
-                  - joeuser@example.com
-                  - simple@example.com
-                  - very.common@example.com
-                  - FirstName.LastName@EasierReading.org
-                  - x@example.com
-                  - long.email-address-with-hyphens@and.subdomains.example.com
-                  - sorting@example.com
-                  - user.name@example.com
-                  - surname@example.com
-                  - example@s.example
-                  - username@example.org
-                  - example.com@example.org
-                  - user@example.com
-                  - user-@example.org
-                  - CHOCOLATE@example.com
-                  - c@example.com
-                  - l@example.com
-                  - right@example.com
-                  - allowed@example.com
-                  - onore@example.com
-                  - extension@pobox.com
+                    - john.smith@example.com
+                    - jsmith@example.com
+                    - john.smith@example.org
+                    - John..Doe@example.com
+                    - johns@example.com
+                    - JohnS@example.com
+                    - tag@example.com
+                    - joeuser@example.com
+                    - simple@example.com
+                    - very.common@example.com
+                    - FirstName.LastName@EasierReading.org
+                    - x@example.com
+                    - long.email-address-with-hyphens@and.subdomains.example.com
+                    - sorting@example.com
+                    - user.name@example.com
+                    - surname@example.com
+                    - example@s.example
+                    - username@example.org
+                    - example.com@example.org
+                    - user@example.com
+                    - user-@example.org
+                    - CHOCOLATE@example.com
+                    - c@example.com
+                    - l@example.com
+                    - right@example.com
+                    - allowed@example.com
+                    - onore@example.com
+                    - extension@pobox.com
                   phones: []
                   places:
-                  - China
-                  - Japan
-                  - Russia
-                  - Rajasthan
-                  - India
+                    - China
+                    - Japan
+                    - Russia
+                    - Rajasthan
+                    - India
         '401':
           description: Your request was not authorized, or your API Key was invalid
         '404':
           description: Requested resource was not found
         '500':
-          description: A server error has occured, try again later
+          description: A server error has occurred, try again later
       requestBody:
         required: true
         content:
@@ -94,11 +96,14 @@ paths:
                 url:
                   type: string
                   description: The URL of the web page to extract contact data from
-                  example: https://en.wikipedia.org/wiki/Email_address
+                limit:
+                  type: number
+                  description: >-
+                    Limits the number of found contact details found on the
+                    page. Set -1 for unlimited
               required:
-              - url
-              example:
-                url: https://en.wikipedia.org/wiki/Email_address
+                - url
+                - limit
 components:
   securitySchemes:
     api_key:
@@ -106,4 +111,7 @@ components:
       name: x-api-key
       in: header
 security:
-- api_key: []
+  - api_key: []
+sampleRequest:
+  url: https://en.wikipedia.org/wiki/Email_address
+  limit: -1
