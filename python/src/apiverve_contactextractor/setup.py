@@ -10,20 +10,14 @@ if os.path.exists(requirements_file):
 
 setup(
     name='apiverve_contactextractor',
-    version='1.1.12',
+    version='1.1.13',
     packages=find_packages(),
     include_package_data=True,
     install_requires=install_requires,
     description='Contact Extractor is a simple tool for extracting contact data from a website URL. It returns the contact emails, phone numbers, and places.',
     author='APIVerve',
     author_email='hello@apiverve.com',
-    url='https://apiverve.com',
-    project_urls={
-        'Homepage': 'https://apiverve.com',
-        'Documentation': 'https://docs.apiverve.com/ref/contactextractor',
-        'Source': 'https://github.com/apiverve/contactextractor-api',
-        'Bug Tracker': 'https://github.com/apiverve/contactextractor-api/issues'
-    },
+    url='https://apiverve.com/marketplace/contactextractor?utm_source=pypi&utm_medium=homepage',
     classifiers=[
         'Programming Language :: Python :: 3',
         'Operating System :: OS Independent',
