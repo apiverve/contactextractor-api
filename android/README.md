@@ -26,7 +26,7 @@ Add the dependency:
 
 ```gradle
 dependencies {
-    implementation 'com.github.apiverve:contactextractor-api:1.1.13'
+    implementation 'com.github.apiverve:contactextractor-api:1.1.14'
 }
 ```
 
@@ -47,7 +47,7 @@ ContactExtractorAPIClient client = new ContactExtractorAPIClient("YOUR_API_KEY")
 try {
     // Prepare request parameters
     Map<String, Object> parameters = new HashMap<>();
-    parameters.put("url", "");
+    parameters.put("url", "https://en.wikipedia.org/wiki/Email_address");
     parameters.put("limit", 5);
 
     // Execute the request
