@@ -12,8 +12,13 @@ public class BasicExample {
         ContactExtractorAPIClient client = new ContactExtractorAPIClient("YOUR_API_KEY_HERE");
 
         try {
-            // Execute the API request (no parameters required)
-            APIResponse response = client.execute(null);
+            // Request body
+            Map&lt;String, Object&gt; parameters &#x3D; new HashMap&lt;&gt;();
+        parameters.put(&quot;url&quot;, &quot;https://en.wikipedia.org/wiki/Email_address&quot;);
+        parameters.put(&quot;limit&quot;, -1);
+
+            // Execute the API request
+            APIResponse response = client.execute(parameters);
 
             // Check if the request was successful
             if (response.isSuccess()) {
