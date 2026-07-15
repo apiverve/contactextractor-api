@@ -15,7 +15,8 @@ const api = new contactextractorAPI({
 
 // Example query
 var query = {
-  "url": "https://en.wikipedia.org/wiki/Email_address"
+  "url": "https://en.wikipedia.org/wiki/Email_address",
+  "limit": -1
 };
 
 // Make the API request using callback
