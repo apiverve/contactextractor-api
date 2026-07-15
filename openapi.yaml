@@ -80,6 +80,15 @@ paths:
                     - Russia
                     - Rajasthan
                     - India
+                  emailCount: 27
+                  phoneCount: 0
+                  placeCount: 5
+                  uniqueDomains:
+                    - example.com
+                    - example.org
+                    - s.example
+                    - EasierReading.org
+                    - pobox.com
         '401':
           description: Your request was not authorized, or your API Key was invalid
         '404':
