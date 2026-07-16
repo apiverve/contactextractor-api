@@ -20,6 +20,6 @@ namespace APIVerve.API.ContactExtractor
         /// Limits the number of found contact details found on the page. Set -1 for unlimited
         /// </summary>
         [JsonProperty("limit")]
-        public string Limit { get; set; }
+        public double Limit { get; set; }
     }
 }
