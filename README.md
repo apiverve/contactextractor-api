@@ -199,11 +199,76 @@ x-api-key: YOUR_API_KEY_HERE
 Get your API key: [https://apiverve.com](https://apiverve.com)
 
 ### Response Format
-All responses are JSON with this structure:
+
+Every APIVerve endpoint returns the same envelope — check `status`, then read `data`:
+
 ```json
 {
   "status": "ok",
+  "error": null,
   "data": { ... }
+}
+```
+
+### Example Response
+
+A real response from the Contact Extractor API:
+
+```json
+{
+  "status": "ok",
+  "error": null,
+  "data": {
+    "url": "https://en.wikipedia.org/wiki/Email_address",
+    "emails": [
+      "john.smith@example.com",
+      "jsmith@example.com",
+      "john.smith@example.org",
+      "John..Doe@example.com",
+      "johns@example.com",
+      "JohnS@example.com",
+      "tag@example.com",
+      "joeuser@example.com",
+      "simple@example.com",
+      "very.common@example.com",
+      "FirstName.LastName@EasierReading.org",
+      "x@example.com",
+      "long.email-address-with-hyphens@and.subdomains.example.com",
+      "sorting@example.com",
+      "user.name@example.com",
+      "surname@example.com",
+      "example@s.example",
+      "username@example.org",
+      "example.com@example.org",
+      "user@example.com",
+      "user-@example.org",
+      "CHOCOLATE@example.com",
+      "c@example.com",
+      "l@example.com",
+      "right@example.com",
+      "allowed@example.com",
+      "onore@example.com",
+      "extension@pobox.com"
+    ],
+    "phones": [],
+    "places": [
+      "China",
+      "Japan",
+      "Russia",
+      "Rajasthan",
+      "India"
+    ],
+    "emailCount": 27,
+    "phoneCount": 0,
+    "placeCount": 5,
+    "uniqueDomains": [
+      "example.com",
+      "example.org",
+      "s.example",
+      "EasierReading.org",
+      "pobox.com"
+    ]
+  }
 }
 ```
 
