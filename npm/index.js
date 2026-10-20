@@ -30,7 +30,7 @@ class contactextractorWrapper {
         this.baseURL = 'https://api.apiverve.com/v1/contactextractor';
 
         // Validation rules for parameters (generated from schema)
-        this.validationRules = {"url":{"type":"string","required":true,"format":"url"},"limit":{"type":"number","required":true,"default":"5"}};
+        this.validationRules = {"url":{"type":"string","required":true,"format":"url"},"limit":{"type":"number","required":false,"default":"5"}};
     }
 
     /**
