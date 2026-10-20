@@ -68,7 +68,7 @@ namespace APIVerve.API.ContactExtractor
         private static readonly Dictionary<string, ValidationRule> _validationRules = new Dictionary<string, ValidationRule>
         {
             { "url", new ValidationRule { Type = "string", Required = true, Format = "url" } },
-            { "limit", new ValidationRule { Type = "number", Required = true } }
+            { "limit", new ValidationRule { Type = "number", Required = false } }
         };
 
         /// <summary>Format validation patterns</summary>

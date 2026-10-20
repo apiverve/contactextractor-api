@@ -1,13 +1,12 @@
-ContactExtractor API
+Contact Extractor API
 ============
 
-Contact Extractor is a simple tool for extracting contact data from a website URL. It returns the contact emails, phone numbers, and places.
+Contact Extractor scrapes public email addresses, phone numbers, and physical addresses from any web page URL. It tallies the findings and returns unique records found on the page.
 
-![Build Status](https://img.shields.io/badge/build-passing-green)
-![Code Climate](https://img.shields.io/badge/maintainability-B-purple)
-![Prod Ready](https://img.shields.io/badge/production-ready-blue)
 
-This is a .NET Wrapper for the [ContactExtractor API](https://apiverve.com/marketplace/contactextractor?utm_source=nuget&utm_medium=readme)
+[![NuGet version](https://img.shields.io/nuget/v/APIVerve.API.ContactExtractor.svg)](https://www.nuget.org/packages/APIVerve.API.ContactExtractor)
+
+This is a .NET wrapper for the [Contact Extractor API](https://apiverve.com/marketplace/contactextractor?utm_source=nuget&utm_medium=referral&utm_content=readme)
 
 ---
 
@@ -40,8 +39,8 @@ From within Visual Studio:
 
 ## Configuration
 
-Before using the contactextractor API client, you have to setup your account and obtain your API Key.
-You can get it by signing up at [https://apiverve.com](https://apiverve.com?utm_source=nuget&utm_medium=readme)
+Before using the Contact Extractor API client, you have to setup your account and obtain your API Key.
+You can get it by signing up at [https://apiverve.com](https://apiverve.com?utm_source=nuget&utm_medium=referral&utm_content=readme)
 
 ---
 
@@ -61,9 +60,9 @@ class Program
         var apiClient = new ContactExtractorAPIClient("[YOUR_API_KEY]");
 
         var queryOptions = new ContactExtractorQueryOptions {
-    url = "https://en.wikipedia.org/wiki/Email_address",
-    limit = -1
-};
+            Url = "https://en.wikipedia.org/wiki/Email_address",
+            Limit = -1
+        };
 
         // Make the API call
         try
@@ -93,13 +92,13 @@ class Program
 
 ## Usage
 
-The ContactExtractor API documentation is found here: [https://docs.apiverve.com/ref/contactextractor](https://docs.apiverve.com/ref/contactextractor?utm_source=nuget&utm_medium=readme).
+The Contact Extractor API documentation is found here: [https://docs.apiverve.com/ref/contactextractor](https://docs.apiverve.com/ref/contactextractor?utm_source=nuget&utm_medium=referral&utm_content=readme).
 You can find parameters, example responses, and status codes documented here.
 
 ### Setup
 
 ###### Authentication
-ContactExtractor API uses API Key-based authentication. When you create an instance of the API client, you can pass your API Key as a parameter.
+Contact Extractor API uses API Key-based authentication. When you create an instance of the API client, you can pass your API Key as a parameter.
 
 ```csharp
 // Create an instance of the API client
@@ -126,9 +125,9 @@ public class Example
         var apiClient = new ContactExtractorAPIClient("[YOUR_API_KEY]");
 
         var queryOptions = new ContactExtractorQueryOptions {
-    url = "https://en.wikipedia.org/wiki/Email_address",
-    limit = -1
-};
+            Url = "https://en.wikipedia.org/wiki/Email_address",
+            Limit = -1
+        };
 
         var response = await apiClient.ExecuteAsync(queryOptions);
 
@@ -159,9 +158,9 @@ public class Example
         var apiClient = new ContactExtractorAPIClient("[YOUR_API_KEY]");
 
         var queryOptions = new ContactExtractorQueryOptions {
-    url = "https://en.wikipedia.org/wiki/Email_address",
-    limit = -1
-};
+            Url = "https://en.wikipedia.org/wiki/Email_address",
+            Limit = -1
+        };
 
         var response = apiClient.Execute(queryOptions);
 
@@ -197,9 +196,9 @@ public class Example
         var apiClient = new ContactExtractorAPIClient("[YOUR_API_KEY]");
 
         var queryOptions = new ContactExtractorQueryOptions {
-    url = "https://en.wikipedia.org/wiki/Email_address",
-    limit = -1
-};
+            Url = "https://en.wikipedia.org/wiki/Email_address",
+            Limit = -1
+        };
 
         try
         {
@@ -254,9 +253,9 @@ public class Example
         apiClient.SetRetryDelay(2000);     // Wait 2 seconds between retries
 
         var queryOptions = new ContactExtractorQueryOptions {
-    url = "https://en.wikipedia.org/wiki/Email_address",
-    limit = -1
-};
+            Url = "https://en.wikipedia.org/wiki/Email_address",
+            Limit = -1
+        };
 
         try
         {
@@ -296,8 +295,8 @@ apiClient.AddCustomHeader("X-Custom-Header", "custom-value");
 apiClient.AddCustomHeader("X-Request-ID", Guid.NewGuid().ToString());
 
 var queryOptions = new ContactExtractorQueryOptions {
-    url = "https://en.wikipedia.org/wiki/Email_address",
-    limit = -1
+    Url = "https://en.wikipedia.org/wiki/Email_address",
+    Limit = -1
 };
 
 var response = await apiClient.ExecuteAsync(queryOptions);
@@ -323,8 +322,8 @@ apiClient.SetLogger(message =>
 });
 
 var queryOptions = new ContactExtractorQueryOptions {
-    url = "https://en.wikipedia.org/wiki/Email_address",
-    limit = -1
+    Url = "https://en.wikipedia.org/wiki/Email_address",
+    Limit = -1
 };
 
 var response = await apiClient.ExecuteAsync(queryOptions);
@@ -342,8 +341,8 @@ apiClient.SetMaxRetries(3);           // Retry up to 3 times (default: 0, max: 3
 apiClient.SetRetryDelay(1500);        // Wait 1.5 seconds between retries (default: 1000ms)
 
 var queryOptions = new ContactExtractorQueryOptions {
-    url = "https://en.wikipedia.org/wiki/Email_address",
-    limit = -1
+    Url = "https://en.wikipedia.org/wiki/Email_address",
+    Limit = -1
 };
 
 var response = await apiClient.ExecuteAsync(queryOptions);
@@ -355,8 +354,8 @@ The API client implements `IDisposable` for proper resource cleanup:
 
 ```csharp
 var queryOptions = new ContactExtractorQueryOptions {
-    url = "https://en.wikipedia.org/wiki/Email_address",
-    limit = -1
+    Url = "https://en.wikipedia.org/wiki/Email_address",
+    Limit = -1
 };
 
 using (var apiClient = new ContactExtractorAPIClient("[YOUR_API_KEY]"))
@@ -433,7 +432,7 @@ using (var apiClient = new ContactExtractorAPIClient("[YOUR_API_KEY]"))
 
 ## Customer Support
 
-Need any assistance? [Get in touch with Customer Support](https://apiverve.com/contact?utm_source=nuget&utm_medium=readme).
+Need any assistance? [Get in touch with Customer Support](https://apiverve.com/contact?utm_source=nuget&utm_medium=referral&utm_content=readme).
 
 ---
 
@@ -444,12 +443,12 @@ Stay up to date by following [@apiverveHQ](https://twitter.com/apiverveHQ) on Tw
 
 ## Legal
 
-All usage of the APIVerve website, API, and services is subject to the [APIVerve Terms of Service](https://apiverve.com/terms?utm_source=nuget&utm_medium=readme) and all legal documents and agreements.
+All usage of the APIVerve website, API, and services is subject to the [APIVerve Terms of Service](https://apiverve.com/terms?utm_source=nuget&utm_medium=referral&utm_content=readme) and all legal documents and agreements.
 
 ---
 
 ## License
-Licensed under the The MIT License (MIT)
+Licensed under the MIT License (MIT)
 
 Copyright (&copy;) 2026 APIVerve, and EvlarSoft LLC
 
