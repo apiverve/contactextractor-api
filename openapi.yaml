@@ -2,8 +2,9 @@ openapi: 3.0.4
 info:
   title: Contact Extractor
   description: >-
-    Contact Extractor is a simple tool for extracting contact data from a
-    website URL. It returns the contact emails, phone numbers, and places.
+    Contact Extractor scrapes public email addresses, phone numbers, and
+    physical addresses from any web page URL. It tallies the findings and
+    returns unique records found on the page.
   termsOfService: https://apiverve.com/terms/
   contact:
     name: APIVerve Support
@@ -18,7 +19,7 @@ servers:
 paths:
   /v1/contactextractor:
     post:
-      summary: Extract Contacts
+      summary: Contact Extractor
       description: Extract contact data from a web page
       operationId: contactextractor
       parameters: []
@@ -112,7 +113,6 @@ paths:
                     page. Set -1 for unlimited
               required:
                 - url
-                - limit
 components:
   securitySchemes:
     api_key:
