@@ -1,6 +1,6 @@
 import re
-from typing import Dict, Optional, Any
-from dataclasses import dataclass, List
+from typing import Dict, Optional, Any, List
+from dataclasses import dataclass
 import requests
 
 
@@ -25,7 +25,7 @@ class ContactextractorAPIClient:
     # Validation rules for parameters (generated from schema)
     VALIDATION_RULES = {
         "url": {"type": "string", "required": True, "format": "url"},
-        "limit": {"type": "number", "required": True, "default": "5"}
+        "limit": {"type": "number", "required": False, "default": "5"}
     }
 
     # Format validation patterns
