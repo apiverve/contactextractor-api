@@ -1,6 +1,6 @@
 # Contact Extractor API - PHP Package
 
-Contact Extractor is a simple tool for extracting contact data from a website URL. It returns the contact emails, phone numbers, and places.
+Contact Extractor scrapes public email addresses, phone numbers, and physical addresses from any web page URL. It tallies the findings and returns unique records found on the page.
 
 ## Installation
 
@@ -132,11 +132,11 @@ $client = new Client(
 
 ## Documentation
 
-For more information, visit the [API Documentation](https://docs.apiverve.com/ref/contactextractor?utm_source=packagist&utm_medium=readme).
+For more information, visit the [API Documentation](https://docs.apiverve.com/ref/contactextractor?utm_source=packagist&utm_medium=referral&utm_content=readme).
 
 ## Support
 
-- Website: [https://apiverve.com/marketplace/contactextractor?utm_source=php&utm_medium=readme](https://apiverve.com/marketplace/contactextractor?utm_source=php&utm_medium=readme)
+- Website: [https://apiverve.com/marketplace/contactextractor?utm_source=php&utm_medium=referral&utm_content=readme](https://apiverve.com/marketplace/contactextractor?utm_source=php&utm_medium=referral&utm_content=readme)
 - Email: hello@apiverve.com
 
 ## License

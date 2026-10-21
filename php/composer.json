@@ -1,7 +1,7 @@
 {
     "name": "apiverve/contactextractor",
-    "description": "Contact Extractor is a simple tool for extracting contact data from a website URL. It returns the contact emails, phone numbers, and places.",
-    "version": "1.2.0",
+    "description": "Contact Extractor scrapes public email addresses, phone numbers, and physical addresses from any web page URL. It tallies the findings and returns unique records found on the page.",
+    "version": "1.2.2",
     "type": "library",
     "license": "MIT",
     "authors": [
@@ -15,13 +15,13 @@
         "api",
         "apiverve",
         "contactextractor",
-        "contact extractor",
-        "contact data",
         "contact extractor api",
-        "contact data api",
-        "contact extractor tool"
+        "extract emails from url",
+        "scrape phone numbers from website",
+        "find email addresses on page",
+        "extract addresses from website"
     ],
-    "homepage": "https://apiverve.com/marketplace/contactextractor?utm_source=php&utm_medium=homepage",
+    "homepage": "https://apiverve.com/marketplace/contactextractor?utm_source=php&utm_medium=referral&utm_content=homepage",
     "support": {
         "email": "hello@apiverve.com",
         "docs": "https://docs.apiverve.com/ref/contactextractor",

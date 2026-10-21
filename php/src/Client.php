@@ -19,7 +19,7 @@ use APIVerve\Contactextractor\Exceptions\ValidationException;
  * print_r($response);
  * ```
  *
- * @see https://apiverve.com/marketplace/contactextractor?utm_source=php&utm_medium=readme
+ * @see https://apiverve.com/marketplace/contactextractor?utm_source=php&utm_medium=referral&utm_content=readme
  */
 class Client
 {
@@ -35,7 +35,7 @@ class Client
      */
     private const VALIDATION_RULES = [
         'url' => ['type' => 'string', 'required' => true, 'format' => 'url'],
-        'limit' => ['type' => 'number', 'required' => true]
+        'limit' => ['type' => 'number', 'required' => false]
     ];
 
     /**
