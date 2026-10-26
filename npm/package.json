@@ -1,6 +1,6 @@
 {
   "name": "@apiverve/contactextractor",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "Contact Extractor scrapes public email addresses, phone numbers, and physical addresses from any web page URL. It tallies the findings and returns unique records found on the page.",
   "main": "index.js",
   "types": "index.d.ts",
