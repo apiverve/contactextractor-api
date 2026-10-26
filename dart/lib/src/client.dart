@@ -46,11 +46,11 @@ final _formatPatterns = {
 
 /// Contact Extractor API client.
 ///
-/// For more information, visit: https://apiverve.com/marketplace/contactextractor?utm_source=dart&utm_medium=readme
+/// For more information, visit: https://apiverve.com/marketplace/contactextractor?utm_source=dart&utm_medium=referral&utm_content=readme
 ///
 /// Parameters:
 /// * [url] (required) - The URL of the web page to extract contact data from [format: url]
-/// * [limit] (required) - Limits the number of found contact details found on the page. Set -1 for unlimited
+/// * [limit] - Limits the number of found contact details found on the page. Set -1 for unlimited
 class ContactextractorClient {
   final String apiKey;
   final String baseUrl;
@@ -59,7 +59,7 @@ class ContactextractorClient {
   /// Validation rules for parameters.
   static final Map<String, ValidationRule> _validationRules = <String, ValidationRule>{
     'url': ValidationRule(type: 'string', required: true, format: 'url'),
-    'limit': ValidationRule(type: 'number', required: true),
+    'limit': ValidationRule(type: 'number', required: false),
   };
 
   ContactextractorClient(this.apiKey, {

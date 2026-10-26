@@ -1,11 +1,11 @@
 # Contact Extractor API - Dart/Flutter Client
 
-Contact Extractor is a simple tool for extracting contact data from a website URL. It returns the contact emails, phone numbers, and places.
+Contact Extractor scrapes public email addresses, phone numbers, and physical addresses from any web page URL. It tallies the findings and returns unique records found on the page.
 
 [![pub package](https://img.shields.io/pub/v/apiverve_contactextractor.svg)](https://pub.dev/packages/apiverve_contactextractor)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-This is the Dart/Flutter client for the [Contact Extractor API](https://apiverve.com/marketplace/contactextractor?utm_source=dart&utm_medium=readme).
+This is the Dart/Flutter client for the [Contact Extractor API](https://apiverve.com/marketplace/contactextractor?utm_source=dart&utm_medium=referral&utm_content=readme).
 
 ## Installation
 
@@ -13,7 +13,7 @@ Add this to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  apiverve_contactextractor: ^1.1.14
+  apiverve_contactextractor: ^1.2.3
 ```
 
 Then run:
@@ -34,7 +34,8 @@ void main() async {
 
   try {
     final response = await client.execute({
-      'url': 'https://en.wikipedia.org/wiki/Email_address'
+      'url': 'https://en.wikipedia.org/wiki/Email_address',
+      'limit': -1
     });
 
     print('Status: ${response.status}');
@@ -90,6 +91,16 @@ void main() async {
       "Russia",
       "Rajasthan",
       "India"
+    ],
+    "emailCount": 27,
+    "phoneCount": 0,
+    "placeCount": 5,
+    "uniqueDomains": [
+      "example.com",
+      "example.org",
+      "s.example",
+      "EasierReading.org",
+      "pobox.com"
     ]
   }
 }
@@ -97,12 +108,12 @@ void main() async {
 
 ## API Reference
 
-- **API Home:** [Contact Extractor API](https://apiverve.com/marketplace/contactextractor?utm_source=dart&utm_medium=readme)
-- **Documentation:** [docs.apiverve.com/ref/contactextractor](https://docs.apiverve.com/ref/contactextractor?utm_source=dart&utm_medium=readme)
+- **API Home:** [Contact Extractor API](https://apiverve.com/marketplace/contactextractor?utm_source=dart&utm_medium=referral&utm_content=readme)
+- **Documentation:** [docs.apiverve.com/ref/contactextractor](https://docs.apiverve.com/ref/contactextractor?utm_source=dart&utm_medium=referral&utm_content=readme)
 
 ## Authentication
 
-All requests require an API key. Get yours at [apiverve.com](https://apiverve.com?utm_source=dart&utm_medium=readme).
+All requests require an API key. Get yours at [apiverve.com](https://apiverve.com?utm_source=dart&utm_medium=referral&utm_content=readme).
 
 ## License
 
@@ -110,4 +121,4 @@ MIT License - see [LICENSE](LICENSE) for details.
 
 ---
 
-Built with Dart for [APIVerve](https://apiverve.com?utm_source=dart&utm_medium=readme)
+Built with Dart for [APIVerve](https://apiverve.com?utm_source=dart&utm_medium=referral&utm_content=readme)
