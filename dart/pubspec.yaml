@@ -1,6 +1,6 @@
 name: apiverve_contactextractor
 description: "Contact Extractor scrapes public email addresses, phone numbers, and physical addresses from any web page URL. It tallies the findings and returns unique records found on the page."
-version: 1.2.3
+version: 1.2.4
 homepage: https://apiverve.com/marketplace/contactextractor?utm_source=dart&utm_medium=referral&utm_content=homepage
 repository: https://github.com/apiverve/contactextractor-api/tree/main/dart
 
